@@ -23,7 +23,8 @@ body {
   background-color: #fff;
 }
 .spec-two-columns, .spec-two-columns * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 @media (max-width: 1599px) {
   .spec-two-columns {
@@ -72,15 +73,16 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 1px solid #ababab;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-feature-settings: "clig" off, "liga" off;
+          font-feature-settings: "clig" off, "liga" off;
+  color: #000;
 }
 .spec-two-columns__wrapper p {
   margin: 0;
   padding: 0;
-  color: #000;
-  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  font-feature-settings: "clig" off, "liga" off;
 }
 .spec-two-columns__wrapper b {
   font-weight: 700;
@@ -99,44 +101,146 @@ body {
   }
 }
 
-.spec-two-columns__list {
+.spec-two-columns__features {
   padding: 30px 52px 35px 42px;
   border-right: 1px solid #ababab;
 }
-.spec-two-columns__list p {
+.spec-two-columns__features p {
   line-height: 1.5;
 }
-.spec-two-columns__list p:not(:last-child) {
+.spec-two-columns__features p:not(:last-child) {
   margin-bottom: 12px;
 }
 @media (max-width: 1599px) {
-  .spec-two-columns__list {
+  .spec-two-columns__features {
     padding: 32px 44px 40px 42px;
   }
 }
 @media (max-width: 1359px) {
-  .spec-two-columns__list {
+  .spec-two-columns__features {
     padding: 32px 37px 31px 40px;
   }
 }
 @media (max-width: 1279px) {
-  .spec-two-columns__list {
+  .spec-two-columns__features {
     padding: 30px 34px 33px 30px;
   }
-  .spec-two-columns__list p:not(:last-child) {
+  .spec-two-columns__features p:not(:last-child) {
     margin-bottom: 11px;
   }
 }
 @media (max-width: 767px) {
-  .spec-two-columns__list {
+  .spec-two-columns__features {
     padding: 26px 27px 32px 25px;
     border-right: none;
     border-bottom: 1px solid #ababab;
   }
-  .spec-two-columns__list p {
+  .spec-two-columns__features p {
     line-height: 1.42;
   }
-  .spec-two-columns__list p:not(:last-child) {
+  .spec-two-columns__features p:not(:last-child) {
     margin-bottom: 9px;
+  }
+}
+
+.spec-two-columns__details {
+  padding: 32px 52px 38px 42px;
+}
+@media (max-width: 1359px) {
+  .spec-two-columns__details {
+    padding: 32px 52px 32px 42px;
+  }
+}
+@media (max-width: 767px) {
+  .spec-two-columns__details {
+    padding: 28px 27px 34px 26px;
+  }
+}
+
+.spec-two-columns__name {
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+@media (max-width: 1359px) {
+  .spec-two-columns__name {
+    letter-spacing: -0.7px;
+  }
+}
+@media (max-width: 1279px) {
+  .spec-two-columns__name {
+    margin-bottom: 13px;
+    letter-spacing: -0.5px;
+  }
+}
+@media (max-width: 767px) {
+  .spec-two-columns__name {
+    margin-bottom: 12px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+  }
+}
+
+.spec-two-columns__list {
+  margin: 0 0 11px 0;
+  padding-left: 24px;
+  list-style-type: none;
+}
+.spec-two-columns__list li {
+  position: relative;
+}
+.spec-two-columns__list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -13px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.spec-two-columns__list li:not(:last-child) {
+  margin-bottom: 6px;
+}
+@media (max-width: 1359px) {
+  .spec-two-columns__list {
+    margin: 0 0 10px 0;
+    padding-left: 22px;
+  }
+  .spec-two-columns__list li {
+    letter-spacing: -0.7px;
+  }
+  .spec-two-columns__list li:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 1279px) {
+  .spec-two-columns__list {
+    margin: 0 0 9px 0;
+    padding-left: 25px;
+  }
+  .spec-two-columns__list li:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .spec-two-columns__list {
+    margin: 0 0 7px 0;
+    padding-left: 20px;
+  }
+  .spec-two-columns__list li {
+    letter-spacing: -1.18px;
+  }
+  .spec-two-columns__list li:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+
+.spec-two-columns__supplement {
+  letter-spacing: -1.15px;
+}
+@media (max-width: 1279px) {
+  .spec-two-columns__supplement {
+    font-size: 14px;
+    letter-spacing: 0;
   }
 }

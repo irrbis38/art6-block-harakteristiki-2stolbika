@@ -5,7 +5,9 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/montserrat-v25-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v25-cyrillic_latin-regular.ttf") format("truetype");
+  src: url("../fonts/montserrat-v25-cyrillic_latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/montserrat-v25-cyrillic_latin-regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -13,7 +15,8 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/montserrat-v25-cyrillic_latin-700.woff2") format("woff2"), url("../fonts/montserrat-v25-cyrillic_latin-700.ttf") format("truetype");
+  src: url("../fonts/montserrat-v25-cyrillic_latin-700.woff2") format("woff2"),
+    url("../fonts/montserrat-v25-cyrillic_latin-700.ttf") format("truetype");
 }
 
 body {
@@ -71,15 +74,15 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 1px solid #ababab;
+  font-family: "Montserrat", sans-serif;
+  font-feature-settings: "clig" off, "liga" off;
+  color: #000;
 
   p {
     margin: 0;
     padding: 0;
-    color: #000;
-    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    font-feature-settings: "clig" off, "liga" off;
   }
 
   b {
@@ -101,7 +104,7 @@ body {
   }
 }
 
-.spec-two-columns__list {
+.spec-two-columns__features {
   padding: 30px 52px 35px 42px;
   border-right: 1px solid #ababab;
 
@@ -143,5 +146,106 @@ body {
         margin-bottom: 9px;
       }
     }
+  }
+}
+
+.spec-two-columns__details {
+  padding: 32px 52px 38px 42px;
+
+  @include lg {
+    padding: 32px 52px 32px 42px;
+  }
+
+  @include xs {
+    padding: 28px 27px 34px 26px;
+  }
+}
+
+.spec-two-columns__name {
+  margin-bottom: 14px;
+  font-weight: 700;
+
+  @include lg {
+    letter-spacing: -0.7px;
+  }
+
+  @include md {
+    margin-bottom: 13px;
+    letter-spacing: -0.5px;
+  }
+
+  @include xs {
+    margin-bottom: 12px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+  }
+}
+
+.spec-two-columns__list {
+  margin: 0 0 11px 0;
+  padding-left: 24px;
+  list-style-type: none;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -13px;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background-color: #000;
+    }
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 6px;
+  }
+
+  @include lg {
+    margin: 0 0 10px 0;
+    padding-left: 22px;
+
+    li {
+      letter-spacing: -0.7px;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  @include md {
+    margin: 0 0 9px 0;
+    padding-left: 25px;
+
+    li:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  @include xs {
+    margin: 0 0 7px 0;
+    padding-left: 20px;
+
+    li {
+      letter-spacing: -1.18px;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.spec-two-columns__supplement {
+  letter-spacing: -1.15px;
+
+  @include md {
+    font-size: 14px;
+    letter-spacing: 0;
   }
 }
