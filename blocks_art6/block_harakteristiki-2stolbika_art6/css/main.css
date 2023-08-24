@@ -16,231 +16,116 @@ body {
   margin: 0;
 }
 
-.spec-two-columns {
+.spec-single-column {
   width: 100%;
   min-width: 320px;
   padding: 50px 0;
   background-color: #fff;
 }
-.spec-two-columns, .spec-two-columns * {
+.spec-single-column, .spec-single-column * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@media (max-width: 1599px) {
-  .spec-two-columns {
-    padding: 40px 0;
+@media (max-width: 1359px) {
+  .spec-single-column {
+    padding: 56px 0 57px;
   }
 }
 @media (max-width: 1279px) {
-  .spec-two-columns {
-    padding: 31px 0;
+  .spec-single-column {
+    padding: 52px 0 59px;
   }
 }
 @media (max-width: 767px) {
-  .spec-two-columns {
-    padding: 23px 0;
+  .spec-single-column {
+    padding: 41px 0 52px;
   }
 }
 
-.spec-two-columns__container {
+.spec-single-column__container {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 15px;
 }
 @media (max-width: 1599px) {
-  .spec-two-columns__container {
+  .spec-single-column__container {
     max-width: 1310px;
   }
 }
 @media (max-width: 1359px) {
-  .spec-two-columns__container {
+  .spec-single-column__container {
     max-width: 1054px;
   }
 }
 @media (max-width: 1279px) {
-  .spec-two-columns__container {
+  .spec-single-column__container {
     max-width: 798px;
   }
 }
 @media (max-width: 767px) {
-  .spec-two-columns__container {
+  .spec-single-column__container {
     width: 100%;
     max-width: 520px;
   }
 }
 
-.spec-two-columns__wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.spec-single-column__wrapper {
+  padding: 36px 56px 45px;
   border: 1px solid #ababab;
-  font-family: "Montserrat", sans-serif;
-  -webkit-font-feature-settings: "clig" off, "liga" off;
-          font-feature-settings: "clig" off, "liga" off;
-  color: #000;
+  background: #f6f6f6;
 }
-.spec-two-columns__wrapper p {
+.spec-single-column__wrapper p {
   margin: 0;
   padding: 0;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
-}
-.spec-two-columns__wrapper b {
-  font-weight: 700;
-}
-@media (max-width: 1359px) {
-  .spec-two-columns__wrapper p {
-    font-size: 15px;
-  }
-}
-@media (max-width: 767px) {
-  .spec-two-columns__wrapper {
-    grid-template-columns: 1fr;
-  }
-  .spec-two-columns__wrapper p {
-    font-size: 14px;
-  }
-}
-
-.spec-two-columns__features {
-  padding: 30px 52px 35px 42px;
-  border-right: 1px solid #ababab;
-}
-.spec-two-columns__features p {
   line-height: 1.5;
+  -webkit-font-feature-settings: "clig" off, "liga" off;
+          font-feature-settings: "clig" off, "liga" off;
 }
-.spec-two-columns__features p:not(:last-child) {
+.spec-single-column__wrapper p:not(:last-child) {
   margin-bottom: 12px;
 }
-@media (max-width: 1599px) {
-  .spec-two-columns__features {
-    padding: 32px 44px 40px 42px;
-  }
-}
-@media (max-width: 1359px) {
-  .spec-two-columns__features {
-    padding: 32px 37px 31px 40px;
-  }
-}
-@media (max-width: 1279px) {
-  .spec-two-columns__features {
-    padding: 30px 34px 33px 30px;
-  }
-  .spec-two-columns__features p:not(:last-child) {
-    margin-bottom: 11px;
-  }
-}
-@media (max-width: 767px) {
-  .spec-two-columns__features {
-    padding: 26px 27px 32px 25px;
-    border-right: none;
-    border-bottom: 1px solid #ababab;
-  }
-  .spec-two-columns__features p {
-    line-height: 1.42;
-  }
-  .spec-two-columns__features p:not(:last-child) {
-    margin-bottom: 9px;
-  }
-}
-
-.spec-two-columns__details {
-  padding: 32px 52px 38px 42px;
-}
-@media (max-width: 1359px) {
-  .spec-two-columns__details {
-    padding: 32px 52px 32px 42px;
-  }
-}
-@media (max-width: 767px) {
-  .spec-two-columns__details {
-    padding: 28px 27px 34px 26px;
-  }
-}
-
-.spec-two-columns__name {
-  margin-bottom: 14px;
+.spec-single-column__wrapper b {
   font-weight: 700;
 }
+@media (max-width: 1599px) {
+  .spec-single-column__wrapper {
+    padding: 36px 53px 42px 40px;
+  }
+  .spec-single-column__wrapper p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 1359px) {
-  .spec-two-columns__name {
-    letter-spacing: -0.7px;
+  .spec-single-column__wrapper {
+    padding: 28px 53px 33px 48px;
   }
-}
-@media (max-width: 1279px) {
-  .spec-two-columns__name {
-    margin-bottom: 13px;
-    letter-spacing: -0.5px;
-  }
-}
-@media (max-width: 767px) {
-  .spec-two-columns__name {
+  .spec-single-column__wrapper p:not(:last-child) {
     margin-bottom: 12px;
-    font-size: 14px;
-    letter-spacing: -0.2px;
-  }
-}
-
-.spec-two-columns__list {
-  margin: 0 0 11px 0;
-  padding-left: 24px;
-  list-style-type: none;
-}
-.spec-two-columns__list li {
-  position: relative;
-}
-.spec-two-columns__list li::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -13px;
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background-color: #000;
-}
-.spec-two-columns__list li:not(:last-child) {
-  margin-bottom: 6px;
-}
-@media (max-width: 1359px) {
-  .spec-two-columns__list {
-    margin: 0 0 10px 0;
-    padding-left: 22px;
-  }
-  .spec-two-columns__list li {
-    letter-spacing: -0.7px;
-  }
-  .spec-two-columns__list li:not(:last-child) {
-    margin-bottom: 5px;
   }
 }
 @media (max-width: 1279px) {
-  .spec-two-columns__list {
-    margin: 0 0 9px 0;
-    padding-left: 25px;
+  .spec-single-column__wrapper {
+    padding: 29px 39px 33px 40px;
   }
-  .spec-two-columns__list li:not(:last-child) {
-    margin-bottom: 4px;
+  .spec-single-column__wrapper p {
+    font-size: 15px;
+  }
+  .spec-single-column__wrapper p:not(:last-child) {
+    margin-bottom: 13px;
   }
 }
 @media (max-width: 767px) {
-  .spec-two-columns__list {
-    margin: 0 0 7px 0;
-    padding-left: 20px;
+  .spec-single-column__wrapper {
+    padding: 25px 23px 33px 23px;
   }
-  .spec-two-columns__list li {
-    letter-spacing: -1.18px;
+  .spec-single-column__wrapper p {
+    line-height: 1.42;
   }
-  .spec-two-columns__list li:not(:last-child) {
-    margin-bottom: 3px;
-  }
-}
-
-.spec-two-columns__supplement {
-  letter-spacing: -1.15px;
-}
-@media (max-width: 1279px) {
-  .spec-two-columns__supplement {
-    font-size: 14px;
-    letter-spacing: 0;
+  .spec-single-column__wrapper p:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
